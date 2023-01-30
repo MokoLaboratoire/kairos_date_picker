@@ -28,6 +28,13 @@ class DatePickerService {
         if(day === 0) day = 7;
         return day - 1;
     }
+
+    getPreviousMonth = (date) => {
+        let previous_month = ""
+        for(let i = 0; i < this.getDay(date); i++) {
+            previous_month += "<td></td>"
+        }
+    }
   }
   
   export default DatePickerService;
